@@ -12,7 +12,7 @@ public class main {
 		g[2]= new Pizza("Onions",300);
 		g[3]= new Pizza("Baccon",550);
 		
-		
+		System.out.println(g[0].price);
 		
 		
 		//g[0].display();

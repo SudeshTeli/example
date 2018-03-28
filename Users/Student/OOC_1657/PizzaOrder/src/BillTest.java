@@ -4,27 +4,29 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class BillTest {
-	Pizza a,c;
-	Bill b;
+	Pizza a,b,c,d;
+	Bill f;
 	@Before
 	public void setUp() throws Exception {
-	a= new Pizza("Mushrooms",240);
-	c=new Pizza("Onions",500);
-	b= new Bill(a,2);
-	b.billgeneration();
+	a= new Pizza("mushrooms",240);
+	b=new Pizza("Pepperoni",500);
+	c=new Pizza("Onions",300);
+	d=new Pizza("Baccon",550);
+	f= new Bill(a,2);
+	f.billgeneration();
 	}
 
 	@Test
 	public void testBill() {
 		//fail("Not yet implemented");
-		assertEquals(b.quantity,2);
-		assertEquals(a,b.pizza);
+		assertEquals(f.quantity,2);
+		assertEquals(a,f.pizza);
 	}
 
 	@Test
 	public void testBillgeneration() {
 	//	fail("Not yet implemented");
-		assertEquals(b.tprice,960);
+		assertEquals(f.tprice,960);
 	}
 
 }
