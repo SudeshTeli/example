@@ -1,11 +1,13 @@
-
+  
 public class Pizza {
+	  public static final int tax=10;
+	 	 public static int totalprice=0;
 	String name;
 	int price;
 	
 	public Pizza(String name, int price) {
 		this.name = name;
-		this.price = price;
+		this.price = price+tax();
 	}
 	
 	
@@ -21,7 +23,15 @@ public class Pizza {
 	public void setPrice(int price) {
 		this.price = price;
 	}
-
+	public int tax(){
+		int num=this.price;
+		int taxamount=0,total=0;
+		taxamount=num/tax;
+		total=2*(this.price+taxamount);
+		totalprice=totalprice+total;
+		return totalprice;
+		
+	}
 	
 	public void display(){
 		System.out.println("The goods name is "+name);
