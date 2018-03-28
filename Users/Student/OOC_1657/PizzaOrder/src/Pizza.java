@@ -1,6 +1,6 @@
   
 public class Pizza {
-	  public static final int tax=10;
+	  public static final int tax=8;
 	 	 public static int totalprice=0;
 	String name;
 	int price;
